@@ -8,38 +8,32 @@
 	</head>
 	<body>
 		<script src="three.js"></script>
-    <!-- <script src="LegacyJSONLoader.js"></script> -->
 		<script type="module">
-      //let LegacyJSONLoader = require("LegacyJSONLoader");
-      //let THREE = import('https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.js');
-			var scene = new THREE.Scene();
-			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+// 			initialize scene variable 
+// 			camera is a PerspectiveCamera(75, , window.innerWidth / window.innerHeight, 0.1, 1000)
 
-			var renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+// 			set renderer to a new WebGLRender()
+// 			use the renderer to setSize to the window's innerWidth and height 
+//  			append the child, renderer.domElement, to the body
 
      
 
-			var geometry = new THREE.BoxGeometry();
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+// 			geometry is a new BoxGeometry();
+// 			let the material be a MeshBasicMaterial with {color: 0x00ff00}
+// 			make object cube of THREE.Mesh as a geometry and secondly material
+// 			add the object to the scene
 
-			camera.position.z = 5;
+// 			set the camera position' z to 5
 
-			var animate = function () {
-				requestAnimationFrame( animate );
+// 			function animate 
+// 			requestAnimationFrame of arg animate
+// 			change cube rotation's x by 0.01 and do the same for y
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
+//           requestAnimationFrame( animate );
+//           renderer.render( scene, camera );
+// 			};
 
-
-          requestAnimationFrame( animate );
-          renderer.render( scene, camera );
-			};
-
-			animate();
+// 		make sure to call on animate() at the end
 		</script>
 	</body>
 </html>
